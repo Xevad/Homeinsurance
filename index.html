@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hollard Insurance Form</title>
+    <style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+img {
+    width: 20%; 
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    width: 100%;
+    max-width: 600px;
+    margin: 20px;
+  
+}
+
+h2 {
+    color: #D60000;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+input[type="text"], input[type="email"], input[type="date"], textarea {
+    width: 100%; 
+    padding: 8px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    height: 100px; 
+    resize: vertical;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #007BFF; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+.submit-button:hover {
+    background-color: #0056b3; 
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+form h4 {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    font-size: 14px; 
+    line-height: 1.5;
+}
+    </style>
+</head>
+<body>
+    <h1>HOME INSURANCE</h1>
+    <!-- <img src="Hollard.png" alt="Hollard Insurance Logo">
+    <p>HOME INSURANCE</p> -->
+    <div class="form-container">
+        <h2>Please fill out this form</h2>
+        <form action="/submit-form" method="POST">
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname">
+
+            <label for="firstName">First Name(s):</label>
+            <input type="text" id="firstName" name="firstName">
+
+            <label for="postalAddress">Postal Address:</label>
+            <textarea id="postalAddress" name="postalAddress"></textarea>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="occupation">Occupation:</label>
+            <input type="text" id="occupation" name="occupation">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+
+            <label for="ghanaCard">Ghana Card Number:</label>
+            <input type="text" id="ghanaCard" name="ghanaCard">
+
+            <label for="propertyAddress">Address of Property to Insure:</label>
+            <textarea id="propertyAddress" name="propertyAddress"></textarea>
+
+            <label for="previousInsurance">Previous Insurance Details:</label>
+            <textarea id="previousInsurance" name="previousInsurance"></textarea>
+
+            <label for="homeOccupancy">Home Occupancy Details:</label>
+            <textarea id="homeOccupancy" name="homeOccupancy"></textarea>
+
+            <label for="constructionDetails">Construction Details of Your House:</label>
+            <textarea id="constructionDetails" name="constructionDetails"></textarea>
+
+            <label for="stormOrFlood">History of Storm or Flood:</label>
+            <textarea id="stormOrFlood" name="stormOrFlood"></textarea>
+
+            <label for="theftOrLoss">History of Theft or Loss:</label>
+            <textarea id="theftOrLoss" name="theftOrLoss"></textarea>
+
+            <label for="highValueContents">High-value Contents:</label>
+            <textarea id="highValueContents" name="highValueContents"></textarea>
+
+            <label for="buildingOwnership">Do you own the building in which you stay?</label>
+            <input type="text" id="buildingOwnership" name="buildingOwnership">
+
+            <label for="insureBuilding">Do you or the owner want to insure the building?</label>
+            <input type="text" id="insureBuilding" name="insureBuilding">
+
+            <input type="submit" class="submit-button" value="Submit">
+
+            <h4>
+                <strong>DECLARATION</strong><br>
+                I WARRANT THAT THE ABOVE STATEMENTS AND PARTICULARS ARE TRUE AND I HEREBY AGREE THAT THIS DECLARATION SHALL BE HELD TO BE
+                PROMISORY AND OF CONTINUING EFFECT AND SHALL FORM THE BASIS OF AND BE DEEMED TO BE INCORPORATED IN THE CONTRACT BETWEEN ME
+                AND HOLLARD INSURANCE COMPANY LTD AND I AM WILLING TO ACCEPT A POLICY SUBJECT TO THE TERMS PRESCRIBED BY THE COMPANY HEREIN, AND TO PAY THE PREMIUM THEREON.
+            </h4>
+            <label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="agree" required>
+                    I agree to the terms stated above.
+                </label>
+                
+                
+           
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="signature">Signature of Proposer:</label>
+            <input type="text" id="signature" name="signature" placeholder="Type your full name" required>
+            
+            <input type="submit" class="submit-button" value="Submit">
+            
+        </form>
+    </div>
+</body>
+</html>
